@@ -1,0 +1,35 @@
+{
+ "name": "Pricing Profile Rule",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "item_group",
+   "label": "Item Group",
+   "fieldtype": "Link",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "product_type",
+   "label": "Product Type",
+   "fieldtype": "Select",
+   "options": "\nFlower\nPre-Roll\nConcentrate\nEdible\nVape\nTincture\nTopical"
+  },
+  {
+   "fieldname": "markup_pct",
+   "label": "Markup %",
+   "fieldtype": "Percent"
+  },
+  {
+   "fieldname": "basis",
+   "label": "Basis",
+   "fieldtype": "Select",
+   "options": "LOW\nMID\nHIGH\nFIXED"
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 1
+}

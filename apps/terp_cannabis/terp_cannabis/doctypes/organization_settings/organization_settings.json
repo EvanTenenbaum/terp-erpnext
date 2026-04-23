@@ -1,0 +1,92 @@
+{
+ "name": "Organization Settings",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "show_grade_field",
+   "label": "Show Grade Field",
+   "fieldtype": "Check",
+   "default": "1"
+  },
+  {
+   "fieldname": "require_grade",
+   "label": "Require Grade",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "show_expected_delivery_date",
+   "label": "Show Expected Delivery Date",
+   "fieldtype": "Check",
+   "default": "1"
+  },
+  {
+   "fieldname": "enable_packaged_unit_type",
+   "label": "Enable Packaged Unit Type",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "cogs_display_mode",
+   "label": "COGS Display Mode",
+   "fieldtype": "Select",
+   "options": "Everyone\nAdmin Only\nHidden",
+   "default": "Admin Only"
+  },
+  {
+   "fieldname": "show_cogs_in_orders",
+   "label": "Show COGS in Orders",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "show_margin_in_orders",
+   "label": "Show Margin in Orders",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "default_warehouse",
+   "label": "Default Warehouse",
+   "fieldtype": "Link",
+   "options": "Warehouse"
+  }
+ ],
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ],
+ "issingle": 1
+}

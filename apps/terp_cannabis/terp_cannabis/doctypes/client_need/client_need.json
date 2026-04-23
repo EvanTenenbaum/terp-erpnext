@@ -1,0 +1,112 @@
+{
+ "name": "Client Need",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_group",
+   "label": "Item Group",
+   "fieldtype": "Link",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "strain",
+   "label": "Strain",
+   "fieldtype": "Link",
+   "options": "THCA Strain"
+  },
+  {
+   "fieldname": "product_type",
+   "label": "Product Type",
+   "fieldtype": "Select",
+   "options": "\nFlower\nPre-Roll\nConcentrate\nEdible\nVape\nTincture\nTopical"
+  },
+  {
+   "fieldname": "quantity_needed",
+   "label": "Quantity Needed",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "unit",
+   "label": "Unit",
+   "fieldtype": "Link",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "max_price",
+   "label": "Max Price",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "urgency",
+   "label": "Urgency",
+   "fieldtype": "Select",
+   "options": "Normal\nUrgent",
+   "default": "Normal"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Active\nMatched\nFulfilled\nCancelled",
+   "default": "Active"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "expiry_date",
+   "label": "Expiry Date",
+   "fieldtype": "Date"
+  }
+ ],
+ "autoname": "naming_series:NEED-.YYYY.-.",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

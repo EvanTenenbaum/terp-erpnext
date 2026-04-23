@@ -1,0 +1,62 @@
+[
+  {
+    "dt": "Customer",
+    "fieldname": "is_seller",
+    "label": "Is Seller",
+    "fieldtype": "Check",
+    "insert_after": "customer_type",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Customer",
+    "fieldname": "license_number",
+    "label": "License Number",
+    "fieldtype": "Data",
+    "insert_after": "is_seller",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Customer",
+    "fieldname": "referred_by",
+    "label": "Referred By",
+    "fieldtype": "Link",
+    "insert_after": "license_number",
+    "module": "Terp Cannabis",
+    "options": "Customer"
+  },
+  {
+    "dt": "Customer",
+    "fieldname": "credit_limit_mode",
+    "label": "Credit Limit Mode",
+    "fieldtype": "Select",
+    "insert_after": "referred_by",
+    "module": "Terp Cannabis",
+    "options": "WARNING\nSOFT_BLOCK\nHARD_BLOCK"
+  },
+  {
+    "dt": "Customer",
+    "fieldname": "vip_portal_enabled",
+    "label": "VIP Portal Enabled",
+    "fieldtype": "Check",
+    "insert_after": "credit_limit_mode",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Customer",
+    "fieldname": "preferred_payment_term",
+    "label": "Preferred Payment Term",
+    "fieldtype": "Link",
+    "insert_after": "vip_portal_enabled",
+    "module": "Terp Cannabis",
+    "options": "Payment Term"
+  },
+  {
+    "dt": "Customer",
+    "fieldname": "sales_rep",
+    "label": "Sales Rep",
+    "fieldtype": "Link",
+    "insert_after": "preferred_payment_term",
+    "module": "Terp Cannabis",
+    "options": "User"
+  }
+]

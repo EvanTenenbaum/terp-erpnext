@@ -1,0 +1,74 @@
+{
+ "name": "Installment Payment",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "sales_invoice",
+   "label": "Sales Invoice",
+   "fieldtype": "Link",
+   "options": "Sales Invoice",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Active\nCompleted\nDefaulted",
+   "default": "Active"
+  },
+  {
+   "fieldname": "schedule",
+   "label": "Schedule",
+   "fieldtype": "Table",
+   "options": "Installment Schedule Item"
+  }
+ ],
+ "autoname": "naming_series:INST-.YYYY.-.",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

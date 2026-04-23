@@ -1,0 +1,84 @@
+{
+ "name": "Match Record",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "client_need",
+   "label": "Client Need",
+   "fieldtype": "Link",
+   "options": "Client Need",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier_supply",
+   "label": "Supplier Supply",
+   "fieldtype": "Link",
+   "options": "Supplier Supply",
+   "reqd": 1
+  },
+  {
+   "fieldname": "match_score",
+   "label": "Match Score",
+   "fieldtype": "Percent"
+  },
+  {
+   "fieldname": "match_reason",
+   "label": "Match Reason",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Suggested\nAccepted\nRejected\nConverted",
+   "default": "Suggested"
+  },
+  {
+   "fieldname": "converted_order",
+   "label": "Converted Order",
+   "fieldtype": "Link",
+   "options": "Sales Order"
+  }
+ ],
+ "autoname": "autoincrement",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

@@ -1,0 +1,106 @@
+{
+ "name": "Shift Audit",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "cash_location",
+   "label": "Cash Location",
+   "fieldtype": "Link",
+   "options": "Cash Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shift_open_by",
+   "label": "Shift Open By",
+   "fieldtype": "Link",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shift_open_at",
+   "label": "Shift Open At",
+   "fieldtype": "Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shift_close_by",
+   "label": "Shift Close By",
+   "fieldtype": "Link",
+   "options": "User"
+  },
+  {
+   "fieldname": "shift_close_at",
+   "label": "Shift Close At",
+   "fieldtype": "Datetime"
+  },
+  {
+   "fieldname": "opening_balance",
+   "label": "Opening Balance",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "closing_balance",
+   "label": "Closing Balance",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "expected_balance",
+   "label": "Expected Balance",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance",
+   "label": "Variance",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transactions",
+   "label": "Transactions",
+   "fieldtype": "Table",
+   "options": "Shift Transaction"
+  }
+ ],
+ "autoname": "naming_series:SHIFT-.YYYY.-.",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

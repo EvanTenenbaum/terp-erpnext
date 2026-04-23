@@ -1,0 +1,48 @@
+{
+ "name": "Sales Catalogue Item",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "item",
+   "label": "Item",
+   "fieldtype": "Link",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "batch_no",
+   "label": "Batch No",
+   "fieldtype": "Link",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "qty_available",
+   "label": "Qty Available",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "fieldname": "listed_price",
+   "label": "Listed Price",
+   "fieldtype": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cogs_basis",
+   "label": "COGS Basis",
+   "fieldtype": "Select",
+   "options": "LOW\nMID\nHIGH\nFIXED"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 1
+}

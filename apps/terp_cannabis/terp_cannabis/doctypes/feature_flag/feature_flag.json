@@ -1,0 +1,69 @@
+{
+ "name": "Feature Flag",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "flag_name",
+   "label": "Flag Name",
+   "fieldtype": "Data",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "is_enabled",
+   "label": "Is Enabled",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "enabled_for_roles",
+   "label": "Enabled For Roles",
+   "fieldtype": "Table",
+   "options": "Feature Flag Role"
+  },
+  {
+   "fieldname": "enabled_for_users",
+   "label": "Enabled For Users",
+   "fieldtype": "Table",
+   "options": "Feature Flag User"
+  }
+ ],
+ "autoname": "field:flag_name",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

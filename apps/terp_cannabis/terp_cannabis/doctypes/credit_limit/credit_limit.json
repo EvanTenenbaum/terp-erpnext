@@ -1,0 +1,76 @@
+{
+ "name": "Credit Limit",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "credit_limit",
+   "label": "Credit Limit",
+   "fieldtype": "Currency",
+   "reqd": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "enforcement_mode",
+   "label": "Enforcement Mode",
+   "fieldtype": "Select",
+   "options": "WARNING\nSOFT_BLOCK\nHARD_BLOCK",
+   "default": "WARNING"
+  },
+  {
+   "fieldname": "current_exposure",
+   "label": "Current Exposure",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_credit",
+   "label": "Available Credit",
+   "fieldtype": "Currency",
+   "read_only": 1
+  }
+ ],
+ "autoname": "field:customer",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

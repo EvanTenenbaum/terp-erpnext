@@ -1,0 +1,33 @@
+{
+ "name": "Photography Queue Image",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "image",
+   "label": "Image",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "fieldname": "caption",
+   "label": "Caption",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "uploaded_by",
+   "label": "Uploaded By",
+   "fieldtype": "Link",
+   "options": "User"
+  },
+  {
+   "fieldname": "uploaded_at",
+   "label": "Uploaded At",
+   "fieldtype": "Datetime"
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 1
+}

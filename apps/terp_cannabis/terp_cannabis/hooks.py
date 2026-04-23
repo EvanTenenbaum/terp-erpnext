@@ -8,6 +8,8 @@ app_email = "evan@evanmail.com"
 app_license = "MIT"
 app_version = "0.1.0"
 
+required_apps = ["erpnext"]
+
 # ─── Modules hidden from all users ──────────────────────────────────────────
 # Modules that exist in ERPNext/Frappe but are irrelevant to cannabis wholesale
 hide_modules = [

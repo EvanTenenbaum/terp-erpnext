@@ -1,0 +1,10 @@
+{
+  "app_name": "terp_cannabis",
+  "github_repo": "https://github.com/EvanTenenbaum/terp-erpnext",
+  "app_directory": "apps/terp_cannabis",
+  "frappe_version": "version-16",
+  "erpnext_version": "version-16",
+  "python_version": "3.11",
+  "required_apps": ["frappe", "erpnext"],
+  "install_order": ["erpnext", "terp_cannabis"]
+}

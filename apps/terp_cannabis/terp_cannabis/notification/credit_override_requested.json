@@ -1,0 +1,14 @@
+{
+  "name": "Credit Override Requested",
+  "doctype": "Notification",
+  "document_type": "Credit Override Request",
+  "event": "New",
+  "subject": "Credit Override Requested — {{ doc.customer }}",
+  "message": "{{ doc.requested_by }} has requested a credit override for {{ doc.customer }}. Requested amount: ${{ doc.requested_amount }}. Current limit: ${{ doc.current_limit }}.",
+  "send_to_all_assignees": 0,
+  "recipients": [
+    {"receiver_by_role": "TERP Accounts Manager"}
+  ],
+  "channel": "System Notification",
+  "enabled": 1
+}

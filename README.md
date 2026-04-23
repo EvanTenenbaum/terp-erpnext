@@ -97,6 +97,22 @@ bench start
 
 Access at `http://terp.localhost:8000` — login: `Administrator` / `admin`
 
+## Frappe Cloud Deployment (Recommended)
+
+1. Go to [frappecloud.com](https://frappecloud.com) and create an account
+2. Create a new Bench — select **ERPNext v16**, Python 3.11
+3. In the bench, go to **Apps** → **Add Custom App** → enter:
+   - GitHub URL: `https://github.com/EvanTenenbaum/terp-erpnext`
+   - Branch: `main`
+   - Install path: `apps/terp_cannabis`
+4. Create a new Site on that bench, install ERPNext + terp_cannabis
+5. After site creation, run in the Frappe Cloud terminal:
+   ```bash
+   bench --site yoursite.frappe.cloud execute terp_cannabis.install.after_install
+   bench --site yoursite.frappe.cloud execute terp_cannabis.seed_masters.seed_erpnext_masters
+   ```
+6. Login as Administrator, go to **TERP Cannabis** workspace, start using
+
 ### Or with Docker (just MariaDB + Redis)
 
 ```bash

@@ -1,0 +1,7 @@
+[
+  {"doctype": "Alert Configuration", "alert_name": "Low Stock Alert", "alert_type": "Low Stock", "threshold_value": 10, "is_enabled": 1},
+  {"doctype": "Alert Configuration", "alert_name": "Overdue Invoice Alert", "alert_type": "Overdue Invoice", "threshold_value": 25, "is_enabled": 1},
+  {"doctype": "Alert Configuration", "alert_name": "Vendor Payable Alert", "alert_type": "Vendor Payable", "is_enabled": 1},
+  {"doctype": "Alert Configuration", "alert_name": "Credit Warning Alert", "alert_type": "Credit Warning", "is_enabled": 1},
+  {"doctype": "Alert Configuration", "alert_name": "Sample Due Alert", "alert_type": "Sample Due", "threshold_value": 1, "is_enabled": 1}
+]

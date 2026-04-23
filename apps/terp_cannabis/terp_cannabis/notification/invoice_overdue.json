@@ -1,0 +1,16 @@
+{
+  "name": "Invoice Overdue",
+  "doctype": "Notification",
+  "document_type": "Sales Invoice",
+  "event": "Days After",
+  "days_after_or_before": 1,
+  "condition": "doc.outstanding_amount > 0 and doc.status == 'Overdue'",
+  "subject": "Invoice Overdue — {{ doc.name }} — {{ doc.customer }}",
+  "message": "Invoice {{ doc.name }} for {{ doc.customer }} is overdue. Amount outstanding: ${{ doc.outstanding_amount }}. Due: {{ doc.due_date }}.",
+  "send_to_all_assignees": 0,
+  "recipients": [
+    {"receiver_by_role": "TERP Accounts Manager"}
+  ],
+  "channel": "Email",
+  "enabled": 1
+}

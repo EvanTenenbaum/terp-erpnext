@@ -1,0 +1,24 @@
+{
+ "name": "Credits",
+ "doctype": "Workspace",
+ "module": "Terp Cannabis",
+ "label": "Client Credit",
+ "title": "Client Credit",
+ "icon": "credit-card",
+ "is_hidden": 0,
+ "public": 1,
+ "sequence_id": 6,
+ "shortcuts": [
+  {"label": "Credit Limits", "link_to": "Credit Limit", "type": "DocType", "icon": "credit-card"},
+  {"label": "Override Requests", "link_to": "Credit Override Request", "type": "DocType", "icon": "unlock"}
+ ],
+ "links": [
+  {"label": "Credit Management", "type": "Card Break", "is_query_report": 0},
+  {"label": "Credit Limit", "link_to": "Credit Limit", "type": "Link", "icon": "credit-card"},
+  {"label": "Credit Adjustment", "link_to": "Credit Adjustment", "type": "Link", "icon": "edit"},
+  {"label": "Credit Override Request", "link_to": "Credit Override Request", "type": "Link", "icon": "unlock"},
+  {"label": "Extended", "type": "Card Break", "is_query_report": 0},
+  {"label": "Referral Credit", "link_to": "Referral Credit", "type": "Link", "icon": "gift"},
+  {"label": "Invoice Dispute", "link_to": "Invoice Dispute", "type": "Link", "icon": "alert-triangle"}
+ ]
+}

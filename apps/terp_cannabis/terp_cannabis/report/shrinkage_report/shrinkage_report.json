@@ -1,0 +1,25 @@
+{
+ "name": "Shrinkage Report",
+ "doctype": "Report",
+ "report_name": "Shrinkage Report",
+ "ref_doctype": "Stock Entry",
+ "report_type": "Script Report",
+ "module": "Terp Cannabis",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "filters": [
+  {"fieldname": "from_date", "label": "From Date", "fieldtype": "Date"},
+  {"fieldname": "to_date", "label": "To Date", "fieldtype": "Date"},
+  {"fieldname": "warehouse", "label": "Warehouse", "fieldtype": "Link", "options": "Warehouse"}
+ ],
+ "columns": [
+  {"fieldname": "date", "label": "Date", "fieldtype": "Date", "width": 110},
+  {"fieldname": "batch", "label": "Batch", "fieldtype": "Link", "options": "Batch", "width": 140},
+  {"fieldname": "product", "label": "Product", "fieldtype": "Link", "options": "Item", "width": 220},
+  {"fieldname": "qty_lost", "label": "Qty Lost", "fieldtype": "Float", "width": 120},
+  {"fieldname": "unit_cost", "label": "Unit Cost", "fieldtype": "Currency", "width": 120},
+  {"fieldname": "shrinkage_value", "label": "Shrinkage Value", "fieldtype": "Currency", "width": 140},
+  {"fieldname": "reason", "label": "Reason", "fieldtype": "Data", "width": 200},
+  {"fieldname": "entered_by", "label": "Entered By", "fieldtype": "Link", "options": "User", "width": 160}
+ ]
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "doctype": "Warehouse",
+    "warehouse_name": "Main Warehouse",
+    "company": "TERP Cannabis",
+    "is_group": 0,
+    "warehouse_type": "Transit"
+  },
+  {
+    "doctype": "Warehouse",
+    "warehouse_name": "TERP House Premium",
+    "company": "TERP Cannabis",
+    "is_group": 0
+  },
+  {
+    "doctype": "Warehouse",
+    "warehouse_name": "Cold Storage",
+    "company": "TERP Cannabis",
+    "is_group": 0
+  }
+]

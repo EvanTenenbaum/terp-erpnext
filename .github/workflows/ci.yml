@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    services:
+      mariadb:
+        image: mariadb:10.6
+        env:
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libssl-dev \
+            libffi-dev \
+            libmariadb-dev \
+            wkhtmltopdf \
+            fonts-liberation \
+            redis-tools
+
+      - name: Install Redis
+        run: |
+          sudo apt-get install -y redis-server
+          sudo service redis-server start
+
+      - name: Install frappe-bench
+        run: pip install frappe-bench
+
+      - name: Init bench
+        run: |
+          bench init \
+            --skip-assets \
+            --frappe-branch version-16 \
+            /home/runner/frappe-bench
+
+      - name: Get ERPNext
+        working-directory: /home/runner/frappe-bench
+        run: bench get-app erpnext --branch version-16
+
+      - name: Add terp_cannabis app
+        working-directory: /home/runner/frappe-bench
+        run: |
+          # Link the checked-out app into the bench
+          ln -s $GITHUB_WORKSPACE/apps/terp_cannabis apps/terp_cannabis
+
+      - name: Create test site
+        working-directory: /home/runner/frappe-bench
+        run: |
+          bench new-site test.localhost \
+            --mariadb-root-password root \
+            --admin-password admin \
+            --no-mariadb-socket \
+            --db-host 127.0.0.1
+
+      - name: Install apps on site
+        working-directory: /home/runner/frappe-bench
+        run: |
+          bench --site test.localhost install-app erpnext
+          bench --site test.localhost install-app terp_cannabis
+
+      - name: Run terp_cannabis tests
+        working-directory: /home/runner/frappe-bench
+        run: |
+          bench --site test.localhost run-tests --app terp_cannabis --verbose
+
+      - name: Check for Python syntax errors
+        run: |
+          find apps/terp_cannabis -name "*.py" -exec python3 -m py_compile {} \;
+          echo "All Python files compile cleanly."

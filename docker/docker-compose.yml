@@ -1,0 +1,48 @@
+version: "3.8"
+
+# TERP Cannabis — ERPNext development environment
+# Usage:
+#   docker compose up -d
+#   Access at http://terp.localhost:8080
+#   Admin login: Administrator / admin
+
+services:
+  mariadb:
+    image: mariadb:10.6
+    container_name: terp-mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: terp_dev
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --skip-character-set-client-handshake
+
+  redis-cache:
+    image: redis:7-alpine
+    container_name: terp-redis-cache
+    restart: unless-stopped
+    ports:
+      - "13000:6379"
+
+  redis-queue:
+    image: redis:7-alpine
+    container_name: terp-redis-queue
+    restart: unless-stopped
+    ports:
+      - "11000:6379"
+
+  redis-socketio:
+    image: redis:7-alpine
+    container_name: terp-redis-socketio
+    restart: unless-stopped
+    ports:
+      - "12000:6379"
+
+volumes:
+  mariadb-data:

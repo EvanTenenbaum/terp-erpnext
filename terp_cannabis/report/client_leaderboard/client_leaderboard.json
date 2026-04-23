@@ -1,0 +1,22 @@
+{
+ "name": "Client Leaderboard",
+ "doctype": "Report",
+ "report_name": "Client Leaderboard",
+ "ref_doctype": "Leaderboard Rank History",
+ "report_type": "Script Report",
+ "module": "Terp Cannabis",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "filters": [
+  {"fieldname": "rank_date", "label": "Rank Date", "fieldtype": "Date"}
+ ],
+ "columns": [
+  {"fieldname": "rank", "label": "Rank", "fieldtype": "Int", "width": 80},
+  {"fieldname": "customer", "label": "Customer", "fieldtype": "Link", "options": "Customer", "width": 220},
+  {"fieldname": "master_score", "label": "Master Score", "fieldtype": "Float", "width": 120},
+  {"fieldname": "financial_score", "label": "Financial Score", "fieldtype": "Float", "width": 120},
+  {"fieldname": "engagement_score", "label": "Engagement Score", "fieldtype": "Float", "width": 140},
+  {"fieldname": "reliability_score", "label": "Reliability Score", "fieldtype": "Float", "width": 140},
+  {"fieldname": "growth_score", "label": "Growth Score", "fieldtype": "Float", "width": 120}
+ ]
+}

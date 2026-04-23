@@ -1,0 +1,89 @@
+{
+ "name": "VIP Portal Configuration",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "portal_enabled",
+   "label": "Portal Enabled",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "enable_live_catalog",
+   "label": "Enable Live Catalog",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "enable_live_shopping",
+   "label": "Enable Live Shopping",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "enable_marketplace",
+   "label": "Enable Marketplace",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "enable_appointments",
+   "label": "Enable Appointments",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "enable_leaderboard",
+   "label": "Enable Leaderboard",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "enable_referrals",
+   "label": "Enable Referrals",
+   "fieldtype": "Check"
+  }
+ ],
+ "autoname": "field:customer",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

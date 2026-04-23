@@ -1,0 +1,19 @@
+{
+ "name": "Feature Flag Role",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "role",
+   "label": "Role",
+   "fieldtype": "Link",
+   "options": "Role",
+   "reqd": 1
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 1
+}

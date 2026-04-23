@@ -1,0 +1,74 @@
+{
+ "name": "Transaction Fee",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "payment_entry",
+   "label": "Payment Entry",
+   "fieldtype": "Link",
+   "options": "Payment Entry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fee_type",
+   "label": "Fee Type",
+   "fieldtype": "Select",
+   "options": "ACH\nWire\nCredit Card Processing\nCrypto",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fee_amount",
+   "label": "Fee Amount",
+   "fieldtype": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "charged_to",
+   "label": "Charged To",
+   "fieldtype": "Select",
+   "options": "Company\nCustomer",
+   "default": "Company"
+  }
+ ],
+ "autoname": "autoincrement",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

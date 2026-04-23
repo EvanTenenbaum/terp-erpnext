@@ -1,0 +1,4 @@
+# Patches file — run via bench migrate
+# Format: dotted.path.to.patch_module [optional_args]
+# Example: terp_cannabis.patches.v0_1.initial_setup
+terp_cannabis.patches.v0_1.initial_setup

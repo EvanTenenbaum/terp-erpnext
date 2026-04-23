@@ -1,0 +1,106 @@
+{
+ "name": "Supplier Supply",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "supplier",
+   "label": "Supplier",
+   "fieldtype": "Link",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_group",
+   "label": "Item Group",
+   "fieldtype": "Link",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "strain",
+   "label": "Strain",
+   "fieldtype": "Link",
+   "options": "THCA Strain"
+  },
+  {
+   "fieldname": "product_type",
+   "label": "Product Type",
+   "fieldtype": "Select",
+   "options": "\nFlower\nPre-Roll\nConcentrate\nEdible\nVape\nTincture\nTopical"
+  },
+  {
+   "fieldname": "quantity_available",
+   "label": "Quantity Available",
+   "fieldtype": "Float",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit",
+   "label": "Unit",
+   "fieldtype": "Link",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "ask_price",
+   "label": "Ask Price",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Available\nReserved\nSold",
+   "default": "Available"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "expiry_date",
+   "label": "Expiry Date",
+   "fieldtype": "Date"
+  }
+ ],
+ "autoname": "naming_series:SUP-.YYYY.-.",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "dt": "Batch",
+    "fieldname": "sku",
+    "label": "SKU",
+    "fieldtype": "Data",
+    "insert_after": "batch_id",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Batch",
+    "fieldname": "batch_status",
+    "label": "Batch Status",
+    "fieldtype": "Link",
+    "insert_after": "sku",
+    "module": "Terp Cannabis",
+    "options": "Workflow Queue Status"
+  },
+  {
+    "dt": "Batch",
+    "fieldname": "supplier",
+    "label": "Supplier",
+    "fieldtype": "Link",
+    "insert_after": "batch_status",
+    "module": "Terp Cannabis",
+    "options": "Supplier"
+  },
+  {
+    "dt": "Batch",
+    "fieldname": "lot_number",
+    "label": "Lot Number",
+    "fieldtype": "Data",
+    "insert_after": "supplier",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Batch",
+    "fieldname": "unit_cost",
+    "label": "Unit Cost",
+    "fieldtype": "Currency",
+    "insert_after": "lot_number",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Batch",
+    "fieldname": "vendor_range_low",
+    "label": "Vendor Range Low",
+    "fieldtype": "Currency",
+    "insert_after": "unit_cost",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Batch",
+    "fieldname": "vendor_range_high",
+    "label": "Vendor Range High",
+    "fieldtype": "Currency",
+    "insert_after": "vendor_range_low",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Batch",
+    "fieldname": "photography_status",
+    "label": "Photography Status",
+    "fieldtype": "Select",
+    "insert_after": "vendor_range_high",
+    "module": "Terp Cannabis",
+    "options": "Pending\nShot\nPublished"
+  },
+  {
+    "dt": "Batch",
+    "fieldname": "intake_session",
+    "label": "Intake Session",
+    "fieldtype": "Link",
+    "insert_after": "photography_status",
+    "module": "Terp Cannabis",
+    "options": "Intake Session"
+  }
+]

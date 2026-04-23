@@ -1,0 +1,14 @@
+{
+  "name": "New Order Submitted",
+  "doctype": "Notification",
+  "document_type": "Sales Order",
+  "event": "Submit",
+  "subject": "New Order Submitted — {{ doc.name }} for {{ doc.customer }}",
+  "message": "Sales Order {{ doc.name }} for {{ doc.customer }} has been confirmed. Total: ${{ doc.grand_total }}.",
+  "send_to_all_assignees": 0,
+  "recipients": [
+    {"receiver_by_role": "TERP Accounts Manager"}
+  ],
+  "channel": "System Notification",
+  "enabled": 1
+}

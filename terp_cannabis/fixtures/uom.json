@@ -1,0 +1,8 @@
+[
+ {"doctype": "UOM", "uom_name": "Pound", "must_be_whole_number": 0},
+ {"doctype": "UOM", "uom_name": "Ounce", "must_be_whole_number": 0},
+ {"doctype": "UOM", "uom_name": "Gram", "must_be_whole_number": 0},
+ {"doctype": "UOM", "uom_name": "Kilogram", "must_be_whole_number": 0},
+ {"doctype": "UOM", "uom_name": "Each", "must_be_whole_number": 0},
+ {"doctype": "UOM", "uom_name": "Milliliter", "must_be_whole_number": 0}
+]

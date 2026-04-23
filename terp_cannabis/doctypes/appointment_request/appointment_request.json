@@ -1,0 +1,90 @@
+{
+ "name": "Appointment Request",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requested_date",
+   "label": "Requested Date",
+   "fieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requested_time",
+   "label": "Requested Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "appointment_type",
+   "label": "Appointment Type",
+   "fieldtype": "Select",
+   "options": "Intake\nDelivery\nSales Meeting\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Pending\nApproved\nRejected\nRescheduled",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "event",
+   "label": "Event",
+   "fieldtype": "Link",
+   "options": "Event"
+  }
+ ],
+ "autoname": "naming_series:APT-.YYYY.-.",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

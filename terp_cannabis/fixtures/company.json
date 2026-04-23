@@ -1,0 +1,15 @@
+[
+  {
+    "doctype": "Company",
+    "company_name": "TERP Cannabis",
+    "abbr": "TERP",
+    "default_currency": "USD",
+    "country": "United States",
+    "domain": "Distribution",
+    "email": "evan@evanmail.com",
+    "phone_no": "",
+    "website": "evantenenbaum.com",
+    "date_of_establishment": "2024-01-01",
+    "fiscal_year_end_month": "December"
+  }
+]

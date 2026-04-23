@@ -1,0 +1,83 @@
+{
+ "name": "Photography Queue",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "batch_no",
+   "label": "Batch No",
+   "fieldtype": "Link",
+   "options": "Batch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item",
+   "label": "Item",
+   "fieldtype": "Link",
+   "options": "Item"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Pending\nShot\nPublished",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "queued_date",
+   "label": "Queued Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "shot_date",
+   "label": "Shot Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "images",
+   "label": "Images",
+   "fieldtype": "Table",
+   "options": "Photography Queue Image"
+  }
+ ],
+ "autoname": "field:batch_no",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "dt": "Supplier",
+    "fieldname": "license_number",
+    "label": "License Number",
+    "fieldtype": "Data",
+    "insert_after": "supplier_type",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Supplier",
+    "fieldname": "harvest_reminder_days",
+    "label": "Harvest Reminder Days",
+    "fieldtype": "Int",
+    "insert_after": "license_number",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Supplier",
+    "fieldname": "verification_email",
+    "label": "Verification Email",
+    "fieldtype": "Data",
+    "insert_after": "harvest_reminder_days",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Supplier",
+    "fieldname": "is_buyer",
+    "label": "Is Buyer",
+    "fieldtype": "Check",
+    "insert_after": "verification_email",
+    "module": "Terp Cannabis"
+  }
+]

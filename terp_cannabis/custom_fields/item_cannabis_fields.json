@@ -1,0 +1,91 @@
+[
+  {
+    "dt": "Item",
+    "fieldname": "strain",
+    "label": "Strain",
+    "fieldtype": "Link",
+    "insert_after": "item_group",
+    "module": "Terp Cannabis",
+    "options": "THCA Strain"
+  },
+  {
+    "dt": "Item",
+    "fieldname": "product_grade",
+    "label": "Product Grade",
+    "fieldtype": "Link",
+    "insert_after": "strain",
+    "module": "Terp Cannabis",
+    "options": "Product Grade"
+  },
+  {
+    "dt": "Item",
+    "fieldname": "product_type",
+    "label": "Product Type",
+    "fieldtype": "Select",
+    "insert_after": "product_grade",
+    "module": "Terp Cannabis",
+    "options": "\nFlower\nPre-Roll\nConcentrate\nEdible\nVape\nTincture\nTopical"
+  },
+  {
+    "dt": "Item",
+    "fieldname": "cogs_mode",
+    "label": "COGS Mode",
+    "fieldtype": "Select",
+    "insert_after": "product_type",
+    "module": "Terp Cannabis",
+    "options": "FIXED\nRANGE"
+  },
+  {
+    "dt": "Item",
+    "fieldname": "cogs_fixed",
+    "label": "COGS Fixed",
+    "fieldtype": "Currency",
+    "insert_after": "cogs_mode",
+    "module": "Terp Cannabis",
+    "depends_on": "eval:doc.cogs_mode=='FIXED'"
+  },
+  {
+    "dt": "Item",
+    "fieldname": "cogs_low",
+    "label": "COGS Low",
+    "fieldtype": "Currency",
+    "insert_after": "cogs_fixed",
+    "module": "Terp Cannabis",
+    "depends_on": "eval:doc.cogs_mode=='RANGE'"
+  },
+  {
+    "dt": "Item",
+    "fieldname": "cogs_mid",
+    "label": "COGS Mid",
+    "fieldtype": "Currency",
+    "insert_after": "cogs_low",
+    "module": "Terp Cannabis",
+    "depends_on": "eval:doc.cogs_mode=='RANGE'"
+  },
+  {
+    "dt": "Item",
+    "fieldname": "cogs_high",
+    "label": "COGS High",
+    "fieldtype": "Currency",
+    "insert_after": "cogs_mid",
+    "module": "Terp Cannabis",
+    "depends_on": "eval:doc.cogs_mode=='RANGE'"
+  },
+  {
+    "dt": "Item",
+    "fieldname": "requires_photography",
+    "label": "Requires Photography",
+    "fieldtype": "Check",
+    "insert_after": "cogs_high",
+    "module": "Terp Cannabis"
+  },
+  {
+    "dt": "Item",
+    "fieldname": "workflow_status",
+    "label": "Workflow Status",
+    "fieldtype": "Link",
+    "insert_after": "requires_photography",
+    "module": "Terp Cannabis",
+    "options": "Workflow Queue Status"
+  }
+]

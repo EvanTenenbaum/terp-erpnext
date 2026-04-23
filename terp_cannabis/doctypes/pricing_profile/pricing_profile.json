@@ -1,0 +1,95 @@
+{
+ "name": "Pricing Profile",
+ "doctype": "DocType",
+ "module": "Terp Cannabis",
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "profile_name",
+   "label": "Profile Name",
+   "fieldtype": "Data",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "base_markup_pct",
+   "label": "Base Markup %",
+   "fieldtype": "Percent"
+  },
+  {
+   "fieldname": "min_margin_pct",
+   "label": "Min Margin %",
+   "fieldtype": "Percent"
+  },
+  {
+   "fieldname": "max_discount_pct",
+   "label": "Max Discount %",
+   "fieldtype": "Percent"
+  },
+  {
+   "fieldname": "allow_below_vendor_range",
+   "label": "Allow Below Vendor Range",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "allow_cogs_override",
+   "label": "Allow COGS Override",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "allow_margin_override",
+   "label": "Allow Margin Override",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "rules",
+   "label": "Rules",
+   "fieldtype": "Table",
+   "options": "Pricing Profile Rule"
+  }
+ ],
+ "autoname": "field:profile_name",
+ "is_submittable": 0,
+ "permissions": [
+  {
+   "role": "TERP Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "TERP Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Sales Rep",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "TERP Fulfillment",
+   "read": 1
+  },
+  {
+   "role": "TERP Auditor",
+   "read": 1
+  }
+ ]
+}

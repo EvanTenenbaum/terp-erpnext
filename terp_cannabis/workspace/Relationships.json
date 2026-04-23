@@ -1,0 +1,31 @@
+{
+ "name": "Relationships",
+ "doctype": "Workspace",
+ "module": "Terp Cannabis",
+ "label": "Relationships",
+ "title": "Relationships",
+ "icon": "customer",
+ "is_hidden": 0,
+ "public": 1,
+ "sequence_id": 4,
+ "shortcuts": [
+  {"label": "New Customer", "link_to": "Customer", "type": "DocType", "icon": "user-plus"},
+  {"label": "New Supplier", "link_to": "Supplier", "type": "DocType", "icon": "truck"}
+ ],
+ "links": [
+  {"label": "Clients", "type": "Card Break", "is_query_report": 0},
+  {"label": "Customer", "link_to": "Customer", "type": "Link", "icon": "users"},
+  {"label": "Credit Limit", "link_to": "Credit Limit", "type": "Link", "icon": "credit-card"},
+  {"label": "Credit Adjustment", "link_to": "Credit Adjustment", "type": "Link", "icon": "edit"},
+  {"label": "Credit Override Request", "link_to": "Credit Override Request", "type": "Link", "icon": "unlock"},
+  {"label": "Client Communication Log", "link_to": "Client Communication Log", "type": "Link", "icon": "message-square"},
+  {"label": "Client Need", "link_to": "Client Need", "type": "Link", "icon": "list"},
+  {"label": "VIP Portal Configuration", "link_to": "VIP Portal Configuration", "type": "Link", "icon": "star"},
+  {"label": "Suppliers", "type": "Card Break", "is_query_report": 0},
+  {"label": "Supplier", "link_to": "Supplier", "type": "Link", "icon": "truck"},
+  {"label": "Supplier Supply", "link_to": "Supplier Supply", "type": "Link", "icon": "package"},
+  {"label": "Supplier Harvest Reminder", "link_to": "Supplier Harvest Reminder", "type": "Link", "icon": "bell"},
+  {"label": "Matching", "type": "Card Break", "is_query_report": 0},
+  {"label": "Match Record", "link_to": "Match Record", "type": "Link", "icon": "link"}
+ ]
+}

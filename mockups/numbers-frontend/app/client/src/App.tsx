@@ -14,6 +14,8 @@ import LiveRoom from "./pages/LiveRoom";
 import SellSheet from "./pages/SellSheet";
 import BuySheet from "./pages/BuySheet";
 import CashSheet from "./pages/CashSheet";
+import ReceiveSheet from "./pages/ReceiveSheet";
+import PaySheet from "./pages/PaySheet";
 import {
   SalesSheet, InventorySheet, ProcurementSheet,
   FinanceSheet, RelationshipsSheet, CreditSheet, AdminSheet,
@@ -45,6 +47,8 @@ function Router() {
       <Route path="/sell/new" component={SellSheet} />
       <Route path="/buy/new" component={BuySheet} />
       <Route path="/cash/new" component={CashSheet} />
+      <Route path="/receive/new" component={ReceiveSheet} />
+      <Route path="/pay/new" component={PaySheet} />
 
       {/* Tools */}
       <Route path="/catalogues/:id" component={CatalogueBuilder} />

@@ -58,6 +58,10 @@ export default function CommandPalette({
       icon: PackageIcon, run: () => setLocation("/buy/new") });
     list.push({ id: "new-cash",     label: "Open cash ledger…",    hint: "Cash in/out for a shift", group: "Actions",
       icon: FileText, run: () => setLocation("/cash/new") });
+    list.push({ id: "new-receive", label: "Post a receipt…",       hint: "Inventory came in from a PO", group: "Actions",
+      icon: PackageIcon, run: () => setLocation("/receive/new") });
+    list.push({ id: "new-pay",     label: "Receive / pay money…", hint: "Pay invoices or take a customer payment", group: "Actions",
+      icon: FileText, run: () => setLocation("/pay/new") });
     list.push({ id: "new-intake",   label: "New intake session…",  hint: "Intake wizard", group: "Actions",
       icon: Sparkles, run: () => setLocation("/intake/new") });
     list.push({ id: "new-catalogue", label: "New sales catalogue…", hint: "Catalogue builder", group: "Actions",

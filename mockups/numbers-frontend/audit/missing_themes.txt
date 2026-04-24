@@ -1,0 +1,81 @@
+Total Missing rows: 133
+
+## Mobile + offline  (6)
+  - US-010  Mobile drawer not shown per inventory
+  - US-107  Mobile pick/pack explicitly listed as "not shown"
+  - US-118  Mobile drawer / mobile pick/pack explicitly "not shown"
+  - US-119  Mobile pick/pack explicitly "not shown"
+  - US-121  Mobile pick/pack interface explicitly listed as "Not explicitly shown"
+  - US-122  Mobile pick/pack surface not implemented
+
+## Theme / density / a11y  (4)
+  - US-014  Skeleton rows for feature-flag loading not mentioned
+  - US-016  Dark/theme toggles explicitly listed as "not shown"
+  - US-017  Density toggles explicitly listed as "not shown"
+  - US-409  Settings tab exists but theme/timezone/language preferences explicitly listed as "Not shown"
+
+## Auth / sessions  (2)
+  - US-343  Session ended page not shown; relates to impersonation which is partial
+  - US-365  sessionStorage impersonation behavior not implemented
+
+## Photos / attachments  (2)
+  - US-084  Document attachment and receipt generation not documented (photo uploader noted as not shown)
+  - US-129  Attachment upload explicitly listed as "Not explicitly shown"
+
+## Print / PDF / email  (3)
+  - US-102  Supplier verification email explicitly listed as "not shown"
+  - US-156  No one-click payment follow-up templates or auto-generated SMS/email shown
+  - US-367  Farmer verification email link explicitly listed as "Not shown"
+
+## GL drill-through  (8)
+  - US-019  Global error boundary not mentioned in inventory
+  - US-031  Dashboard KPIs exist but no SKU Status Browser widget with drill-down
+  - US-097  Toggle between pilot/classic intake UI not documented
+  - US-198  GL reversal action not explicitly shown
+  - US-221  No Chart of Accounts with active/inactive toggle
+  - US-391  QuotesPilotSurface sheet-native mode toggle not in inventory
+  - US-392  No spreadsheet-native mode toggle (ReturnsPilotSurface) mentioned
+  - US-395  No GL Reversal Viewer component on dashboard or accounting surfaces
+
+## Calendar internals  (2)
+  - US-277  Tab count pills exist but appointment/time-off request counts on calendar tabs not shown
+  - US-407  Calendar view tab exists but no PendingInvitationsWidget or invitations tab
+
+## Pick / pack / scan  (3)
+  - US-048  No Pick List tab in Sales; only Sales Orders, Quotations, Returns, Catalogues etc.
+  - US-049  No Pick List tab exists
+  - US-120  Barcode scanning explicitly "not shown"
+
+## Notifications & alerts  (2)
+  - US-187  No threshold-based alert banner for overdue invoice count on Dashboard
+  - US-400  No vendor payables alert panel for sold-out batches with outstanding balances
+
+## Per-user settings  (3)
+  - US-336  Per-user settings pages explicitly listed as not shown
+  - US-337  Per-user settings pages explicitly listed as not shown
+  - US-338  Per-user settings pages explicitly listed as not shown
+
+## Reports/dashboard widgets  (8)
+  - US-024  Cash Position panel with scheduled payables/net not shown
+  - US-027  "Suppliers Waiting to Be Paid" panel not shown on dashboard
+  - US-190  No reconciliation summary widget (outstanding invoices, unrecorded payments, last recon date)
+  - US-219  No Chart of Accounts tab/table in any sheet
+  - US-220  No Chart of Accounts management
+  - US-402  No Consignment Range Panel on client Money tab shown
+  - US-408  Appointments tab exists but no Today Appointments / Live Queue panels on scheduling
+  - US-419  Dashboard has widgets but ComponentErrorBoundary isolation not mentioned
+
+## Bulk operations  (1)
+  - US-379  Admin data tools (import, migrations, schema push) not in inventory
+
+## Other  (89)
+  - US-018  Version banner with reload not mentioned
+  - US-037  No "Next" contextual action column described in schema
+  - US-051  No truncation notice described
+  - US-074  Sample marking on line items not documented
+  - US-075  Order-level adjustments (discounts/fees) with visibility control not documented
+  - US-076  Live totals exist in footer (Sum/Avg), but floating document preview not documented
+  - US-077  Auto-save/debounced draft not documented
+  - US-083  Duplicate order action not documented
+  …and 81 more
+

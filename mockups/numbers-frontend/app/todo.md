@@ -175,3 +175,14 @@ Goal: every existing page should already feel like Numbers, follow the no-copy-p
 - [ ] Push update commit to mockups/numbers-frontend branch
 - [ ] Save webdev checkpoint
 - [ ] Then resume the user-story coverage audit
+
+
+## T. Receive + Pay rituals + Frappe binding + Coverage audit (next steps)
+- [ ] /receive/new — Receive open POs, type-to-search PO #, lines auto-fill
+- [ ] /pay/new — Pay supplier bills (AP) or record customer payments (AR)
+- [ ] Wire both into App.tsx router + CommandPalette
+- [ ] client/src/lib/api.ts — Frappe REST adapter w/ seed fallback
+- [ ] useDoctype(slug) hook + replace seed in one page as proof
+- [ ] docs/BINDING.md — "seed → real Frappe" walkthrough
+- [ ] coverage_report.md — every USER_STORIES row mapped Covered/Partial/Missing
+- [ ] Re-shoot, save checkpoint, push final commit

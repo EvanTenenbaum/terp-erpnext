@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { Check, ChevronDown } from "lucide-react";
+import { Check } from "lucide-react";
 import type { FieldDef } from "@/data/schema";
 import { fmtCurrency, fmtDate, fmtDateTime, fmtNum, fmtPct, chipClassFor, shortStatus } from "@/lib/format";
+import LinkSearch from "./LinkSearch";
 
 interface Props {
   field: FieldDef;
@@ -45,6 +46,19 @@ export default function CellEditor({
       >
         {renderDisplay(field, value)}
       </div>
+    );
+  }
+
+  // ── Link fields: type-to-search across the linked DocType. No copy-paste.
+  if (field.type === "link") {
+    const target = typeof field.options === "string" ? field.options : "";
+    return (
+      <LinkSearch
+        targetSlug={target}
+        value={local}
+        onCommit={(v) => { setLocal(v); onCommit(v); onStopEdit?.(); }}
+        onCancel={cancel}
+      />
     );
   }
 

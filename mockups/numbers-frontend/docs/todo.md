@@ -133,3 +133,45 @@ The shape is the same across Sell / Buy / Receive / Pay / Cash count:
 - [ ] Exclude: node_modules, .manus-logs, dist, build, .vite, .git
 - [ ] Add a top-level README at the new subdir explaining what these mockups are and how to run
 - [ ] git push, return PR-ready URL
+
+
+## S. Uniform application of the north-star (entire app, not just new pages)
+
+Goal: every existing page should already feel like Numbers, follow the no-copy-paste / type-to-search pattern wherever a row references a master record, and use plain language consistently. No bolt-ons, no decorative chrome.
+
+### Identity-cell type-to-search across every sheet tab
+- [ ] In the generic SheetTable, treat the *first* cell of every row as the "identity" cell — typing into it triggers a live dropdown of matching rows from the relevant DocType, exactly like the ritual sheets, with FIFO-aware ordering when applicable
+- [ ] When the column is a `link` field (e.g. Sales Order → Customer; Purchase Receipt → Supplier; Batch → Item), the dropdown searches the linked DocType
+- [ ] When the column is the natural key (e.g. Customer.name, Batch.batch_no), the dropdown searches that DocType's own rows
+- [ ] Selecting a row autofills any fields the schema marks as `autofill_from_link`
+
+### Schema-wide plain language
+- [ ] Audit every DocType label in `data/schema.ts` — replace ERPNext-isms with the plain words the team uses: "Sales", "Farmer Code", "Payment Office", "Visit Frequency", "Payment Behavior", "Owe", "Held", "Live Qty", "On Vault", "Strain Family"
+- [ ] Same in field labels (e.g. `outstanding_amount` → "Owed", `posting_date` → "Date", `due_date` → "Due", `grand_total` → "Total")
+
+### Spreadsheet shell consistency on every page
+- [ ] SheetPage already provides shell + tabs. Audit SheetRoutes / Reports / VIP / Shared / CatalogueBuilder / IntakeWizard / LiveRoom for any leftover ad-hoc top bars and align them with the SheetPage chrome
+- [ ] Kill remaining "+ New" header buttons everywhere — bottom add-row pattern is the only insert
+- [ ] Every page surfaces footer summary on the active sheet (Count · Sum · Avg)
+- [ ] Right-click menus available on every sheet table
+
+### Dashboard → "Summary" sheet
+- [ ] Replace the branded KPI strip with a single Summary sheet: a Numbers chart frame, an Overrides table, an Aging table, a Today's Sales table — all real cells, not cards
+- [ ] Title strip becomes the same compact strip as the rituals
+
+### Reports → chart-per-tab, no KPI strip
+- [ ] Drop the "+1 vs yesterday" deltas and the colored stat tiles
+- [ ] Each tab shows: chart + the underlying spreadsheet of rows below it
+
+### VIP / Shared / Catalogue Builder / Intake Wizard / Live Room
+- [ ] VIP Portal: thin gradient strip only; everything else is a sheet (it's the customer-facing version of the relationships sheet)
+- [ ] Shared catalogue: thin strip + product sheet + persistent "Your order" sheet at right
+- [ ] Catalogue Builder: a two-pane sheet view (Inventory ⇆ Catalogue), drag rows between them, no modal
+- [ ] Intake Wizard: collapse to a single sheet with a "Stage" pill at the top instead of step-by-step cards; user fills the same sheet across stages
+- [ ] Live Shopping Room: keep the dark stage but drop the radial glows and over-glossy chips
+
+### Verification
+- [ ] Re-shoot every screen at v5
+- [ ] Push update commit to mockups/numbers-frontend branch
+- [ ] Save webdev checkpoint
+- [ ] Then resume the user-story coverage audit

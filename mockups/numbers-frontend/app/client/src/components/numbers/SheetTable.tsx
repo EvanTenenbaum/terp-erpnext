@@ -161,6 +161,19 @@ export default function SheetTable({
         if (r) onOpen?.(r);
         return;
       }
+      // Type-to-edit: when a single cell is selected and the user types a
+      // printable character, immediately enter edit mode for that cell. This
+      // is what makes the spreadsheet feel like Numbers.
+      if (range && range.r1 === range.r2 && range.c1 === range.c2 && !editing) {
+        const isPrintable = e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey;
+        if (isPrintable) {
+          const f = fields[range.c1];
+          if (f && !f.readonly && f.type !== "check") {
+            setEditing({ row: range.r1, col: range.c1 });
+            // let the keystroke continue into the new input naturally
+          }
+        }
+      }
       if (!range) return;
       const move = (dr: number, dc: number) => {
         const nr = Math.min(Math.max(range.r2 + dr, 0), Math.max(0, totalRows - 1));
@@ -266,6 +279,16 @@ export default function SheetTable({
                       className={selCell ? "range-cell" : undefined}
                       onMouseDown={(e) => {
                         if (isEdit) return;
+                        // Single-click to edit on identity cells (link/data),
+                        // so users can just start typing the row's name. No
+                        // double-click required.
+                        if (!f.readonly && (f.type === "link" || f.type === "data")) {
+                          setEditing({ row: ri, col: fi });
+                          // also stake the range so footer math reflects it
+                          setRange({ r1: ri, c1: fi, r2: ri, c2: fi });
+                          e.stopPropagation();
+                          return;
+                        }
                         // drag-range start
                         setDragAnchor({ r: ri, c: fi });
                         setRange({ r1: ri, c1: fi, r2: ri, c2: fi });

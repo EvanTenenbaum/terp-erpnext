@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "name": "Claude Neutral",
+    "source": "default"
+  },
+  "colors": {
+    "primary": "#D97757",
+    "secondary": "#E5E1D8",
+    "accent": "#4A4A4A",
+    "neutral": {
+      "50": "#FAFAFA",
+      "100": "#F4F4F5",
+      "200": "#E4E4E7",
+      "300": "#D4D4D8",
+      "400": "#A1A1AA",
+      "500": "#71717A",
+      "600": "#52525B",
+      "700": "#3F3F46",
+      "800": "#27272A",
+      "900": "#18181B"
+    },
+    "surface": "#FFFFFF",
+    "on_surface": "#18181B"
+  },
+  "typography": {
+    "display": "Georgia, serif",
+    "heading": "Georgia, serif",
+    "body": "system-ui, -apple-system, sans-serif",
+    "mono": "ui-monospace, SFMono-Regular, monospace",
+    "scale": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem"
+    }
+  },
+  "spacing": {
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "4": "1rem",
+    "8": "2rem",
+    "16": "4rem"
+  },
+  "radius": {
+    "none": "0",
+    "sm": "0.125rem",
+    "md": "0.375rem",
+    "lg": "0.5rem",
+    "full": "9999px"
+  }
+}
